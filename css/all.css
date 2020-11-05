@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    
+}
+/*容器設定*/
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 15px;  /*為了不要讓畫面貼邊*/
+    padding-right: 15px; /*為了不要讓畫面貼邊*/
+}
+
+/*header設定*/
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 20px;
+	margin-bottom: 24px;
+}
+@media (max-width: 768px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.logo a{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background: url(../images/M1.png);
+    white-space: nowrap;
+    text-indent: 101%;
+    overflow:hidden; 
+}
+@media (max-width: 768px){
+    .logo{
+        margin-bottom: 30px;
+    }
+    .logo a{
+        width: 150px;
+        height: 150px;
+        background: url(../images/M2.png);
+        background-repeat: no-repeat;
+    }
+}
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-menu li a{
+    display: block;
+    background:#2d393b;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+    border-right: 2px solid white;
+}
+@media (max-width: 768px){
+    .header-menu li {
+        width: 50%;
+        margin: 0 auto 5px auto;
+    }
+}
+
+/*content設定開始*/
+.content{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap; /*要使右邊的banner可以往下掉而設定*/
+}
+.content-text{
+    width: 75%;
+    border: 1px solid #2d393b;
+    padding: 15px;
+}
+.content-text h2{
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.content-text p{
+    font-size: 16px;
+    line-height: 25px;
+}
+@media (max-width:768px){
+    .content{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content-text{
+        width: 100%;
+    }
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 23%; /*縮放到可以與content並排*/
+    border: 1px solid #2d393b;
+    padding: 8px;
+}
+@media (max-width:768px){
+    .sidebar{
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+    }
+}
+.footer{
+    text-align: center;
+    padding-top: 15px;
+}
